@@ -1,0 +1,16 @@
+.contacts {
+  background-color: $white;
+}
+
+.contacts__description {
+  font-family: $font-secondary;
+  line-height: 20px;
+  color: $special-dark-grey;
+  text-transform: uppercase
+}
+
+.contacts__address {
+  line-height: 20px;
+  font-style: normal;
+  color: $dark-grey;
+}
