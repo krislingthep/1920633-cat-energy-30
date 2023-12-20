@@ -1,10 +1,21 @@
 .button {
-  font-family: $font-secondary;
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: $white;
-  background-color: $basic-green;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+
+  &--primary {
+    color: $white;
+    background-color: $basic-green;
+  }
+
+  &--secondary {
+    color: $dark-grey;
+    background-color: $basic-grey;
+  }
 }

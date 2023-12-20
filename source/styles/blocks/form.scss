@@ -1,11 +1,15 @@
+.form__fieldset {
+  border: none;
+}
+
 .form__label {
-  font-family: $font-secondary;
+  font-family: $secondary-font;
   color: $dark-grey;
   text-transform: uppercase;
 }
 
 .form__control:placeholder-shown {
-  font-family: $font-secondary;
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
