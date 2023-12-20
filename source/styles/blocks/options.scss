@@ -3,11 +3,48 @@
 }
 
 .options__title {
+  position: relative;
+  margin-left: 70px;
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--slim::after {
+    position: absolute;
+    top: -3px;
+    left: -63px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../../images/icons/stack.svg#cat-slim");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+  }
+
+  &--pro::after {
+    position: absolute;
+    top: 12px;
+    left: -79px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../../images/icons/stack.svg#cat-pro");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+  }
 }
 
 .options__link {

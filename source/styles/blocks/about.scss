@@ -9,6 +9,41 @@
   @include reset-list;
 }
 
+.about__item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+  }
+
+  &--leaf::before {
+    background-image: url("../../images/icons/stack.svg#leaf");
+    background-size: 30px 32px;
+  }
+
+  &--powder::before {
+    background-image: url("../../images/icons/stack.svg#powder");
+    background-size: 27px 29px;
+  }
+
+  &--eat::before {
+    background-image: url("../../images/icons/stack.svg#eat");
+    background-size: 26px 30px;
+  }
+
+  &--scales::before {
+    background-image: url("../../images/icons/stack.svg#scales");
+    background-size: 27px 31px;
+  }
+}
+
 .about__description {
+  margin-left: 20px;
   color: $dark-grey;
 }
