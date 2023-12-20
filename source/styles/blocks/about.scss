@@ -1,0 +1,14 @@
+.about__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.about__list {
+  @include reset-list;
+}
+
+.about__description {
+  color: $dark-grey;
+}

@@ -1,0 +1,20 @@
+.gift {
+  min-width: 280px;
+  min-height: 290px;
+  background-color: #6db145;
+  background-image: url("../../images/catalog/gift-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/catalog/gift-mobile@2x.jpg");
+    background-size: 280px 290px;
+  }
+}
+
+.gift__text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+}

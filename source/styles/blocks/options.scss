@@ -1,0 +1,23 @@
+.options__list {
+  @include reset-list;
+}
+
+.options__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.options__link {
+  font-family: $secondary-font;
+  line-height: 16px;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.options__description {
+  color: $dark-grey;
+}

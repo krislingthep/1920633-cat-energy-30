@@ -1,0 +1,23 @@
+.product-card__link {
+  color: $black;
+  text-decoration: none;
+}
+
+.product-card__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $special-dark-grey;
+  text-transform: uppercase;
+
+  &--black {
+    color: $special-black;
+  }
+}
+
+.product-card__details {
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-grey;
+}

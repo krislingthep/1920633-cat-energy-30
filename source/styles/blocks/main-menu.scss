@@ -1,0 +1,12 @@
+.main-menu {
+  @include reset-list;
+}
+
+.main-menu__link {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  color: $black;
+  text-transform: uppercase;
+  text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.form__fieldset {
+  border: none;
+}
+
+.form__label {
+  font-family: $secondary-font;
+  color: $dark-grey;
+  text-transform: uppercase;
+}
+
+.form__control:placeholder-shown {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form__note {
+  line-height: 16px;
+  text-align: center;
+}

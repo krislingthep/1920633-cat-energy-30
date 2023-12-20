@@ -1,0 +1,26 @@
+.hero {
+  background-color: #64a73c;
+  background-image: url("../../images/hero/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/hero/index-background-mobile@2x.jpg");
+    background-size: 320px 302px;
+  }
+}
+
+.hero__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $white;
+}
+
+.hero__slogan {
+  font-family: $secondary-font;
+  line-height: 14px;
+  color: $white;
+  text-transform: uppercase;
+}
