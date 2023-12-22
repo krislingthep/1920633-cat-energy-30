@@ -1,11 +1,95 @@
 .form__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
+}
+
+.form__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+
+  &--radio:not(:last-child),
+  &--checkbox:not(:last-child) {
+    margin-bottom: 13px;
+  }
 }
 
 .form__label {
   font-family: $secondary-font;
   color: $dark-grey;
   text-transform: uppercase;
+
+  &--text {
+    margin-right: 13px;
+  }
+
+  &--radio,
+  &--checkbox {
+    padding-left: 45px;
+  }
+}
+
+.form__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $white;
+  border: 1px solid $special-light-grey;
+}
+
+.form__radio{
+  &+ .form__control-mark {
+    border-radius: 50%;
+  }
+
+  &:checked + .form__control-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.form__control {
+  flex-grow: 1;
+  height: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: $secondary-font;
+  font-size: 20px;
+  color: $dark-grey;
+  text-transform: uppercase;
+  border: 1px solid $border-grey;
+
+  &:hover {
+    border-color: $special-light-grey;
+  }
+
+  &:focus {
+    border: 2px solid $dark-grey;
+  }
+
+  &--error {
+    border: 2px solid $error;
+  }
+
+  &--email:focus + .form__icon,
+  &--phone:focus + .form__icon{
+    color: $basic-green;
+  }
+
+  &--error + .form__icon {
+    color: $error;
+  }
 }
 
 .form__control:placeholder-shown {
@@ -13,6 +97,14 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
+  color: $special-dark-grey;
 }
 
 .form__note {

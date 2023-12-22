@@ -48,11 +48,23 @@
 }
 
 .options__link {
+  position: relative;
   font-family: $secondary-font;
   line-height: 16px;
   color: $black;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:after {
+    position: absolute;
+    top: 5px;
+    right: -39px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../../images/icons/stack.svg#arrow");
+    background-repeat: no-repeat;
+    content: "";
+  }
 }
 
 .options__description {

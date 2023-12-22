@@ -73,22 +73,22 @@
 
             <fieldset class="form__fieldset">
               <legend class="visually-hidden">Тип программы</legend>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--radio">
+                <label class="form__label form__label--radio">
                   <input class="visually-hidden form__radio" type="radio" name="goal" value="lose-weight" checked>
                   <span class="form__control-mark"></span>
                   Похудение
                 </label>
               </div>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--radio">
+                <label class="form__label form__label--radio">
                   <input class="visually-hidden form__radio" type="radio" name="goal" value="gain-weight">
                   <span class="form__control-mark"></span>
                   Набор массы
                 </label>
               </div>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--radio">
+                <label class="form__label form__label--radio">
                   <input class="visually-hidden form__radio" type="radio" name="goal" value="need-advice">
                   <span class="form__control-mark"></span>
                   Не знаю (Нужен ваш совет)
@@ -100,44 +100,52 @@
               <legend class="form__legend section-title">Контактные данные (владельца кота)</legend>
               <div class="form__field">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
-                <input class="form__control form__control--text" id="email" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+                <input class="form__control form__control--email" id="email" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+                <svg class="form__icon" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use href="images/icons/stack.svg#email"></use>
+                </svg>
               </div>
               <div class="form__field">
                 <label class="form__label form__label--text" for="phone">Телефон:*</label>
-                <input class="form__control form__control--text" id="phone" type="tel" name="owner-phone-number" placeholder="8 (960) 900-60-90" required>
+                <input class="form__control form__control--phone" id="phone" type="tel" name="owner-phone-number" placeholder="8 (960) 900-60-90" required>
+                <svg class="form__icon" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use href="images/icons/stack.svg#phone"></use>
+                </svg>
               </div>
             </fieldset>
 
             <fieldset class="form__fieldset">
               <legend class="form__legend section-title">Комментарий</legend>
-              <textarea class="form__control form__control--textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <div class="form__field">
+                <textarea class="form__control form__control--textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
             </fieldset>
 
             <fieldset class="form__fieldset">
               <legend class="form__legend section-title">Дополнительно</legend>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--checkbox">
+                <label class="form__label form__label--checkbox">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="sugar-substitute" checked>
                   <span class="form__control-mark"></span>
                   Сахарозаменитель
                 </label>
               </div>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--checkbox">
+                <label class="form__label form__label--checkbox">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="water">
                   <span class="form__control-mark"></span>
                   Питьевая вода
                 </label>
               </div>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--checkbox">
+                <label class="form__label form__label--checkbox">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="milk">
                   <span class="form__control-mark"></span>
                   Молоко
                 </label>
               </div>
-              <div class="form__field">
-                <label class="form__label">
+              <div class="form__field form__field--checkbox">
+                <label class="form__label form__label--checkbox">
                   <input class="visually-hidden form__checkbox" type="checkbox" name="vitamins">
                   <span class="form__control-mark"></span>
                   Витамины
@@ -171,8 +179,11 @@
       </section>
 
       <div class="footer__container container">
-        <a class="logo" href="index.html">
-          <img class="logo__text" src="images/footer/footer-logo.svg" width="128" height="24" alt="Логотип Кэт Энерджи.">
+        <a class="footer__logo" href="index.html">
+          <svg class="footer__logo-text" width="128" height="24" role="img">
+            <use href="images/icons/stack.svg#footer-logo"></use>
+          </svg>
+          <span class="visually-hidden">Логотип Cat Energy</span>
         </a>
 
         <section class="footer__social social">
@@ -201,8 +212,8 @@
             HTML Academy
           </a>
           <a class="copyright__link-icon" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="none" viewBox="0 0 27 34">
-              <path fill="#666" d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/>
+            <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" role="img">
+              <use href="images/icons/stack.svg#logo-academy"></use>
             </svg>
             <span class="visually-hidden">Логотип HTML Academy</span>
           </a>
