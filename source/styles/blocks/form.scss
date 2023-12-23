@@ -41,8 +41,8 @@
   border: 1px solid $special-light-grey;
 }
 
-.form__radio{
-  &+ .form__control-mark {
+.form__radio {
+  & + .form__control-mark {
     border-radius: 50%;
   }
 
@@ -56,6 +56,13 @@
     background-color: $basic-green;
     border-radius: 50%;
     content: "";
+  }
+}
+
+.form__checkbox {
+  &:checked + .form__control-mark {
+    background-image: url("../../images/icons/stack.svg#tick");
+    background-position: center;
   }
 }
 
@@ -83,7 +90,7 @@
   }
 
   &--email:focus + .form__icon,
-  &--phone:focus + .form__icon{
+  &--phone:focus + .form__icon {
     color: $basic-green;
   }
 
