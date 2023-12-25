@@ -3,4 +3,22 @@
   line-height: 20px;
   color: $dark-grey;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link-icon {
+  color: $special-grey;
+
+  &:hover,
+  &:focus {
+    color: $basic-green;
+  }
+
+  &:active {
+    color: $basic-green;
+    opacity: 0.3;
+  }
 }

@@ -1,3 +1,40 @@
 .social__list {
   @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(3, 28px);
+  width: 132px;
+  gap: 24px;
+}
+
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vk {
+    mask-image: url("../../images/icons/stack.svg#vkontakte");
+    background-color: $special-grey;
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#youtube");
+    background-color: $special-grey;
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#telegram");
+    background-color: $special-grey;
+  }
 }
