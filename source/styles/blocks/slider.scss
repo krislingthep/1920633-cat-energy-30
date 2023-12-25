@@ -2,6 +2,18 @@
   position: relative;
 }
 
+.slider__wrapper {
+  position: relative;
+
+  &--before {
+    position: absolute;
+  }
+
+  &--after {
+    position: relative;
+  }
+}
+
 .slider__button {
   position: relative;
   width: 4px;

@@ -1,3 +1,22 @@
+.product-card {
+  position: relative;
+
+  &--show-more {
+    padding-top: 55px;
+
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+      background-image: url("../../images/icons/stack.svg#plus");
+      content: "";
+    }
+  }
+}
+
 .product-card__link {
   color: $black;
   text-decoration: none;

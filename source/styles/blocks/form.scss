@@ -85,12 +85,15 @@
     border: 2px solid $dark-grey;
   }
 
+  &--icon {
+    padding-right: 46px;
+  }
+
   &--error {
     border: 2px solid $error;
   }
 
-  &--email:focus + .form__icon,
-  &--phone:focus + .form__icon {
+  &--icon:focus + .form__icon {
     color: $basic-green;
   }
 
