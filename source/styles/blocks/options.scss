@@ -1,9 +1,28 @@
 .options__list {
   @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 570px);
+  }
+}
+
+.options__item {
+  padding: 30px 33px 18px 20px;
+  background-color: $basic-grey;
 }
 
 .options__title {
   position: relative;
+  margin: 0;
   margin-left: 70px;
   font-family: $secondary-font;
   font-size: 24px;

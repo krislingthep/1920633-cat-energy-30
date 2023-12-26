@@ -1,3 +1,20 @@
+.form__container {
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 570px);
+    gap: 80px;
+  }
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 284px 324px;
+      gap: 32px 60px;
+    }
+  }
+}
+
 .form__fieldset {
   margin: 0;
   padding: 0;
@@ -119,5 +136,4 @@
 
 .form__note {
   line-height: 16px;
-  text-align: center;
 }

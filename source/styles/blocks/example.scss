@@ -15,6 +15,13 @@
 
 .example__list {
   @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__item {
+  text-align: center;
 }
 
 .example__number {
