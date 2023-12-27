@@ -1,3 +1,9 @@
+.contacts__text {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .contacts__description {
   font-family: $secondary-font;
   line-height: 20px;
