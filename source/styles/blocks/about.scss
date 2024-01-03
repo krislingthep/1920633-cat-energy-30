@@ -1,8 +1,26 @@
+.about {
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 69px;
+  }
+}
+
 .about__title {
+  margin-top: 0;
+  margin-bottom: 40px;
   font-family: $secondary-font;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .about__list {
@@ -19,7 +37,7 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, 246px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 80px;
     width: 1220px;
   }
@@ -43,12 +61,26 @@
     background-position: center;
     content: "";
     flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / 2;
+      align-self: end;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   @media (max-width: $mobile-width) {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 80px 135px;
+    gap: 30px;
+    min-height: 280px;
   }
 
   &--leaf::before {
@@ -75,4 +107,10 @@
 .about__description {
   margin: 0;
   color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    align-self: start;
+  }
 }

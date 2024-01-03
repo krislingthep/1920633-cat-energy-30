@@ -1,3 +1,18 @@
+.options {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
+    padding-bottom: 71px;
+  }
+}
+
 .options__list {
   @include reset-list;
 
@@ -11,7 +26,7 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 570px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 80px;
   }
 }

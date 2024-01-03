@@ -1,9 +1,39 @@
 .header {
   background-color: $white;
-  padding: 10px 15px;
+  z-index: 1;
+
+  &--index {
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        height: 694px;
+        background-color: #65a83d;
+        background-image: url("../../images/hero/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        content: "";
+        z-index: -1;
+      }
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background-image: url("../../images/hero/index-background-desktop@2x.jpg");
+        background-size: auto 694px;
+      }
+    }
+  }
 }
 
 .header__container {
+  @media (min-width: $mobile-width) {
+    padding: 13px 0 14px;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;

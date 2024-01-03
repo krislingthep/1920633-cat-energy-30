@@ -14,10 +14,38 @@
 }
 
 .main-menu__link {
+  position: relative;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
   color: $black;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (max-width: calc($desktop-width - 1px)) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--current::before {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $basic-green;
+      content: "";
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--index {
+      color: $white;
+    }
+
+    &--index#{&}--current::before {
+      background-color: $white;
+    }
+  }
 }
