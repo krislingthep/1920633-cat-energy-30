@@ -7,7 +7,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding-bottom: 93px;
+      padding-bottom: 92px;
     }
   }
 
@@ -338,6 +338,10 @@
   transform: translateY(-50%);
   right: 14px;
   color: $special-dark-grey;
+
+  @media (min-width: $desktop-width) {
+    right: 16px;
+  }
 }
 
 .form__button-wrapper {
