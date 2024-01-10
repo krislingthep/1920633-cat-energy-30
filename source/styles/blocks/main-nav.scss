@@ -3,7 +3,7 @@
 
   @media (max-width: calc($tablet-width - 1px)) {
     &--closed .main-menu__item {
-          display: none;
+      display: none;
     }
   }
 }
