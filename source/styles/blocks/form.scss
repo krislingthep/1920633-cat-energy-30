@@ -367,6 +367,10 @@
 .form__button {
   width: 100%;
 
+  @media (max-width: calc($tablet-width - 1px)) {
+    margin-top: 32px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 14px 45px;
     font-size: 20px;
@@ -375,6 +379,8 @@
 }
 
 .form__note {
+  margin-top: 21px;
+  margin-bottom: 0;
   line-height: 16px;
 
   @media (min-width: $tablet-width) {

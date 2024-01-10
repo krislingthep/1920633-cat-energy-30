@@ -44,6 +44,7 @@
   @media (min-width: $tablet-width) {
     margin-top: 82px;
     padding-top: 158px;
+    padding-bottom: 38px;
   }
 
   @media (min-width: $desktop-width) {
@@ -141,6 +142,10 @@
     text-align: center;
     color: $special-dark-grey;
 
+    @media (min-width: $tablet-width) {
+      margin-bottom: 22px;
+    }
+
     @media (min-width: $desktop-width) {
       margin-bottom: 24px;
     }
@@ -194,7 +199,7 @@
     margin-top: 21px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 80px;
+      margin-top: 79px;
     }
 
     @media (min-width: $desktop-width) {
