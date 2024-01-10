@@ -1,3 +1,54 @@
 .more {
-  display: block;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 87px;
+  }
+}
+
+.more__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.more__title-wrapper {
+  border-top: 2px solid $basic-green;
+}
+
+.more__title {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding: 0 20px;
+  background-color: $white;
+  transform: translate(-20px, -17px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+    padding: 0 40px;
+    transform: translateY(-24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+    transform: translate(-40px, -24px);
+  }
+}
+
+.more__gift {
+  margin-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }

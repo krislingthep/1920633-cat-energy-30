@@ -2,6 +2,10 @@
 $primary-font: "Lato", "Arial", sans-serif;
 $secondary-font: "Oswald", "Arial", sans-serif;
 
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 $black: #000000;
 $white: #ffffff;
 
@@ -11,8 +15,10 @@ $green-action: #5eaa2f;
 $basic-grey: #f2f2f2;
 $light-grey: #eaeaea;
 $border-grey: #e7e7e7;
+$border-special-grey: #ebebeb;
 $special-light-grey: #cdcdcd;
 $special-grey: #666666;
+$line-grey: #d9d9d9;
 $dark-grey: #444444;
 $special-dark-grey: #222222;
 $special-black: #111111;

@@ -12,38 +12,40 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
-      <a class="logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/header/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
-          <source media="(min-width: 768px)" srcset="images/header/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
-          <img class="logo__image" src="images/header/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
-        </picture>
+    <header class="header header--index">
+      <div class="header__container container">
+        <a class="logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/header/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/header/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img class="logo__image" src="images/header/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
 
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/header/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
-          <source media="(min-width: 768px)" srcset="images/header/logo-text.svg" width="101" height="18" type="image/svg+xml">
-          <img class="logo__text" src="images/header/logo-text.svg" width="101" height="18" alt="Cat Energy.">
-        </picture>
-      </a>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/header/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/header/logo-text.svg" width="101" height="18" type="image/svg+xml">
+            <img class="logo__text" src="images/header/logo-text.svg" width="101" height="18" alt="Cat Energy.">
+          </picture>
+        </a>
 
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
 
-        <ul class="main-nav__list main-menu">
-          <li class="main-menu__item">
-            <a class="main-menu__link main-menu__link--current" href="#">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+          <ul class="main-nav__list main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--index main-menu__link--current" href="#">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--index" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--index" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main-container">
@@ -51,8 +53,10 @@
 
       <section class="hero">
         <div class="hero__container container">
-          <h2 class="hero__title">Функциональное питание для котов</h2>
-          <p class="hero__slogan">Занялся собой? Займись котом!</p>
+          <div class="hero__wrapper">
+            <h2 class="hero__title">Функциональное питание для котов</h2>
+            <p class="hero__slogan">Занялся собой? Займись котом!</p>
+          </div>
           <picture>
             <source media="(min-width: 1440px)" srcset="images/hero/index-can-desktop@1x.png 1x, images/hero/index-can-desktop@2x.png 2x" width="552" height="499" type="image/png">
             <source media="(min-width: 768px)" srcset="images/hero/index-can-tablet@1x.png 1x, images/hero/index-can-tablet@2x.png 2x" width="709" height="609" type="image/png">
@@ -90,7 +94,7 @@
           <ul class="about__list">
             <li class="about__item about__item--leaf">
               <p class="about__description">
-                Функциональное питание содержит только полезные питательные вещества.
+                Функциональное питание содержит&nbsp;только полезные питательные вещества.
               </p>
             </li>
             <li class="about__item about__item--powder">
@@ -100,12 +104,12 @@
             </li>
             <li class="about__item about__item--food">
               <p class="about__description">
-                Замените один-два приема обычной еды на наше функциональное питание.
+                Замените один-два приема обычной&nbsp;еды на наше функциональное питание.
               </p>
             </li>
             <li class="about__item about__item--scales">
               <p class="about__description">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
               </p>
             </li>
           </ul>
@@ -114,19 +118,26 @@
 
       <section class="example">
         <div class="example__container container">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="example__list">
-            <li class="example__item">
-              <p class="example__number">5 кг</p>
-              <p class="example__info">снижение веса</p>
-            </li>
-            <li class="example__item">
-              <p class="example__number">60 дней</p>
-              <p class="example__info">затрачено времени</p>
-            </li>
-          </ul>
-          <p class="example__total">Затраты на питание: 15 000 РУБ.</p>
+          <div class="example__wrapper">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__info">
+              <ul class="example__list">
+                <li class="example__item">
+                  <p class="example__number">5 кг</p>
+                  <p class="example__text">снижение веса</p>
+                </li>
+                <li class="example__item">
+                  <p class="example__number">60 дней</p>
+                  <p class="example__text">затрачено времени</p>
+                </li>
+              </ul>
+              <div class="example__result">
+                <span>Затраты на питание:</span>
+                <span class="example__total">15 000 РУБ.</span>
+              </div>
+            </div>
+          </div>
           <div class="example__result slider">
             <div class="slider__wrapper slider__wrapper--before">
               <picture>
@@ -153,8 +164,11 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__container container">
           <div class="contacts__text">
-            <p class="contacts__description">Приглашаем к сотрудничеству дилеров!</p>
-            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <p class="contacts__description">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <address class="contacts__address">
+              <span class="contacts__address-text">ул. Большая Конюшенная, д. 19/8</span>
+              <span class="contacts__address-text">Санкт-Петербург</span>
+            </address>
           </div>
         </div>
         <div class="contacts__map">

@@ -1,12 +1,68 @@
 .main-menu {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 436px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 478px;
+  }
+}
+
+.main-menu__item {
+  @media (max-width: calc($tablet-width - 1px)) {
+    border-top: 1px solid #e6e6e6;
+  }
 }
 
 .main-menu__link {
+  position: relative;
+  display: block;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
+  text-align: center;
   color: $black;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    padding-top: 22px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--current::before {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $basic-green;
+      content: "";
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--current::before {
+      bottom: -12px;
+    }
+
+    &--index {
+      color: $white;
+    }
+
+    &--index#{&}--current::before {
+      background-color: $white;
+    }
+  }
 }

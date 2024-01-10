@@ -1,17 +1,55 @@
+.about {
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 49px;
+  }
+}
+
 .about__title {
+  margin-top: 0;
+  margin-bottom: 40px;
   font-family: $secondary-font;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .about__list {
   @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 247px);
+    gap: 37px 137px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    width: 1220px;
+  }
 }
 
 .about__item {
+  position: relative;
   display: flex;
   align-items: center;
+  gap: 20px;
 
   &::before {
     width: 60px;
@@ -20,6 +58,44 @@
     background-repeat: no-repeat;
     background-position: center;
     content: "";
+    flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / 2;
+      align-self: end;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 80px 135px;
+    grid-template-rows: 120px 1fr;
+    gap: 30px;
+    min-height: 280px;
+    counter-increment: number 1;
+
+    &::after {
+      position: absolute;
+      left: 115px;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      content: counter(number);
+      z-index: -1;
+    }
   }
 
   &--leaf::before {
@@ -44,6 +120,14 @@
 }
 
 .about__description {
-  margin-left: 20px;
+  margin: 0;
   color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    align-self: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

@@ -1,5 +1,7 @@
 .logo {
   position: relative;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 
   &:hover {
@@ -8,5 +10,21 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    padding-bottom: 10px;
+  }
+}
+
+.logo__image {
+  margin-right: 56px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 14px;
   }
 }

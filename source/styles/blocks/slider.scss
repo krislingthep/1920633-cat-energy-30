@@ -4,9 +4,15 @@
 
 .slider__wrapper {
   position: relative;
+  overflow: hidden;
 
   &--before {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
   }
 
   &--after {
@@ -14,14 +20,22 @@
   }
 }
 
+.slider__image {
+  vertical-align: bottom;
+}
+
 .slider__button {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 4px;
   height: 256px;
   padding: 0;
   background-color: $special-grey;
   border-radius: 2px;
   border: none;
+  z-index: 2;
 
   &::before,
   &::after {
@@ -72,5 +86,9 @@
     &::after {
       background-color: $green-action;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
   }
 }

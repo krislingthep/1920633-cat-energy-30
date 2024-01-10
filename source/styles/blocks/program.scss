@@ -1,4 +1,45 @@
+.program {
+  @media (min-width: $tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 79px;
+  }
+}
+
+.program__intro {
+  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    padding: 0 40px;
+  }
+}
+
+.program__title {
+  margin-top: 27px;
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
 .program__text {
+  margin-top: 0;
+  margin-bottom: 39px;
   font-family: $secondary-font;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 325px;
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
