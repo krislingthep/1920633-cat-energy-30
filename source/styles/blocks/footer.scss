@@ -21,6 +21,11 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: calc($tablet-width - 1px)) {
+    padding-bottom: 18px;
+    border-bottom: 1px solid $line-grey;
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: flex-start;
   }
@@ -42,12 +47,22 @@
 .footer__social {
   display: flex;
   justify-content: center;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    padding-top: 20px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line-grey;
+  }
 }
 
 .footer__copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    padding-top: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;

@@ -28,7 +28,7 @@
           </picture>
         </a>
 
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -50,34 +50,34 @@
 
     <main class="main-container">
       <section class="program">
-        <div class="program__container container">
+        <div class="container">
           <div class="program__intro">
             <h1 class="program__title page__title">Подбор программы</h1>
-            <p class="program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+            <p class="program__text">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
           </div>
         </div>
 
         <form class="program__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <section class="form__section">
+          <section class="form__section form__section--info">
             <h2 class="visually-hidden">Анкета для выбора программы</h2>
             <div class="form__container container">
               <fieldset class="form__fieldset form__fieldset--info">
                 <legend class="visually-hidden">Данные питомца</legend>
-                <div class="form__field"><!--flex grow-->
+                <div class="form__field form__field--text"><!--flex grow-->
                   <label class="form__label form__label--text" for="pet-name">ИМЯ:*</label>
                   <input class="form__control form__control--text" id="pet-name" type="text" name="pet-name" placeholder="Барсик" required>
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field--text">
                   <label class="form__label form__label--text" for="pet-weight">Вес (кг):*</label>
                   <input class="form__control form__control--text" id="pet-weight" type="number" name="pet-weight" placeholder="7" required>
                 </div>
-                <div class="form__field">
+                <div class="form__field form__field--text">
                   <label class="form__label form__label--text" for="pet-age">Возраст (лет):</label>
                   <input class="form__control form__control--text" id="pet-age" type="number" name="pet-age" placeholder="7">
                 </div>
               </fieldset>
 
-              <fieldset class="form__fieldset">
+              <fieldset class="form__fieldset form__fieldset--radio">
                 <legend class="visually-hidden">Тип программы</legend>
                 <div class="form__field form__field--radio">
                   <label class="form__label form__label--radio">
@@ -104,21 +104,21 @@
             </div>
           </section>
 
-          <section class="form__section">
-            <div class="form__title-wrapper">
-              <div class="container">
-                <h2 class="form__title section-title">Контактные данные (владельца кота)</h2>
+          <section class="form__section form__section--contacts">
+            <div class="form__title-wrapper form__title-wrapper--contacts">
+              <div class="form__container-title container">
+                <h2 class="form__title form__title section-title">Контактные данные (владельца кота)</h2>
               </div>
             </div>
             <div class="form__container container">
-              <div class="form__field">
+              <div class="form__field form__field--text-contacts">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
                 <input class="form__control form__control--icon" id="email" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
                 <svg class="form__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                   <use href="images/icons/stack.svg#email"></use>
                 </svg>
               </div>
-              <div class="form__field">
+              <div class="form__field form__field--text-contacts">
                 <label class="form__label form__label--text" for="phone">Телефон:*</label>
                 <input class="form__control form__control--icon" id="phone" type="tel" name="owner-phone-number" placeholder="8 (960) 900-60-90" required>
                 <svg class="form__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
@@ -130,20 +130,22 @@
           </section>
 
 
-          <section class="form__section">
-            <div class="form__title-wrapper">
-              <div class="container">
-                <h2 class="form__title section-title">Комментарий</h2>
+          <section class="form__section form__section--comment">
+            <div class="form__title-wrapper form__title-wrapper--comment">
+              <div class="form__container-title container">
+                <h2 class="form__title form__title section-title">Комментарий</h2>
               </div>
             </div>
-            <div class="form__field container">
-              <textarea class="form__control form__control--textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="form__container container">
+              <div class="form__field">
+                <textarea class="form__control form__control--textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
             </div>
           </section>
 
-          <section class="form__section">
-            <div class="form__title-wrapper">
-              <div class="container">
+          <section class="form__section form__section--checkbox">
+            <div class="form__title-wrapper form__title-wrapper--checkbox">
+              <div class="form__container-title container">
                 <h2 class="form__title section-title">Дополнительно</h2>
               </div>
             </div>

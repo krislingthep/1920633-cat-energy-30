@@ -1,12 +1,12 @@
 .about {
-  padding-bottom: 50px;
+  padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 69px;
+    padding-bottom: 49px;
   }
 }
 
@@ -20,6 +20,8 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -44,11 +46,7 @@
 }
 
 .about__item {
-  // display: grid;
-  // align-items: center;
-  // grid-template-columns: 60px 200px;
-  // gap: 20px;
-
+  position: relative;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -70,6 +68,10 @@
     }
   }
 
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   @media (max-width: $mobile-width) {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -79,8 +81,21 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 80px 135px;
+    grid-template-rows: 120px 1fr;
     gap: 30px;
     min-height: 280px;
+    counter-increment: number 1;
+
+    &::after {
+      position: absolute;
+      left: 115px;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      content: counter(number);
+      z-index: -1;
+    }
   }
 
   &--leaf::before {
@@ -112,5 +127,7 @@
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     align-self: start;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

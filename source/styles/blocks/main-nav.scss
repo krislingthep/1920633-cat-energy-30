@@ -1,14 +1,61 @@
 .main-nav {
-  display: flex;
-  align-items: center;
+  position: relative;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    &--closed .main-menu__item {
+          display: none;
+    }
+  }
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: -43px;
+  right: 1px;
+  width: 24px;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $black;
+  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+  content: "";
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    width: 24px;
+    height: 2px;
+    background-color: $black;
+    content: "";
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__list {
-  margin-right: 4px;
+  @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+    margin-right: 4px;
+  }
 }

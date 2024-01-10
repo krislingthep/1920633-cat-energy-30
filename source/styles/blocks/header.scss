@@ -2,6 +2,10 @@
   background-color: $white;
   z-index: 1;
 
+  @media (max-width: calc($tablet-width - 1px)) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   &--index {
     position: relative;
 
@@ -14,7 +18,7 @@
         background-color: #65a83d;
         background-image: url("../../images/hero/index-background-desktop@1x.jpg");
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: left;
         content: "";
         z-index: -1;
       }
@@ -31,12 +35,18 @@
 
 .header__container {
   @media (min-width: $mobile-width) {
-    padding: 13px 0 14px;
+    padding-top: 13px;
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
   }
 }

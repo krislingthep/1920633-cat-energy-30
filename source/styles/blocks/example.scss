@@ -1,17 +1,18 @@
 .example {
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 19px;
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
-    padding-bottom: 80px;
-    background-image: linear-gradient($white 57%, $light-grey 57%);
+    padding-bottom: 81px;
+    background-image: linear-gradient($white 619px, $light-grey 619px);
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
-    background-image: linear-gradient($white 23%, $light-grey 23%);
+    padding-bottom: 74px;
+    background-image: linear-gradient($white 136px, $light-grey 136px);
   }
 }
 
@@ -72,12 +73,17 @@
 }
 
 .example__info {
-  margin-bottom: 81px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -92,6 +98,10 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 162px);
     gap: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
   }
 }
 
@@ -126,7 +136,7 @@
   line-height: 12px;
   color: $dark-grey;
   background-color: $light-grey;
-  transform: translateY(50%);
+  transform: translateY(8px);
 
   @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
     background-color: $white;
@@ -158,6 +168,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     text-align: left;
+    margin-bottom: 0;
   }
 }
 

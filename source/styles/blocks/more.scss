@@ -23,22 +23,29 @@
 
 .more__title {
   display: inline-block;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 18px;
   padding: 0 20px;
   background-color: $white;
   transform: translate(-20px, -17px);
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
     padding: 0 40px;
-    transform: translate(-40px, -17px);
+    transform: translateY(-24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+    transform: translate(-40px, -24px);
   }
 }
 
 .more__gift {
-  margin-top: 35px;
+  margin-top: 34px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 70px;
+    margin-top: 69px;
   }
 
   @media (min-width: $desktop-width) {
