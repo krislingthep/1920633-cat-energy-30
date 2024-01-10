@@ -144,6 +144,12 @@
       margin-bottom: 0;
     }
   }
+
+  &--textarea {
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .form__label {
