@@ -1,22 +1,33 @@
 .slider {
+  --slide-width: 50%;
+
   position: relative;
+  display: grid;
+  grid-template-columns: var(--slide-width) calc(100% - var(--slide-width));
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
 }
 
-.slider__wrapper {
-  position: relative;
+.slider__slide {
+  display: flex;
   overflow: hidden;
 
   &--before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    z-index: 1;
+    justify-content: flex-start;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 50%;
+    // height: 100%;
+    // z-index: 1;
   }
 
   &--after {
-    position: relative;
+    justify-content: flex-end;
+    // position: relative;
   }
 }
 

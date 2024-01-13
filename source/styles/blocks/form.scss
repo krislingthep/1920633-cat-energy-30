@@ -169,22 +169,63 @@
 
   &--radio,
   &--checkbox {
-    padding-left: 45px;
+    padding-left: 15px;
 
     @media (min-width: $tablet-width) {
-      padding-left: 60px;
+      padding-left: 20px;
     }
   }
 }
 
-.form__control-mark {
-  position: absolute;
-  top: 0;
-  left: 0;
+.form__radio {
+  margin: 0;
   width: 30px;
   height: 30px;
+  appearance: none;
   background-color: $white;
   border: 1px solid $special-light-grey;
+  border-radius: 50%;
+
+  &:checked {
+    background-image: url("../../images/icons/stack.svg#radio-circle");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 18px;
+    }
+  }
+
+  // &:checked + .form__control-mark::before {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   width: 13px;
+  //   height: 13px;
+  //   background-color: $basic-green;
+  //   border-radius: 50%;
+  //   content: "";
+
+  //   @media (min-width: $tablet-width) {
+  //     width: 18px;
+  //     height: 18px;
+  //   }
+  // }
+
+  &:hover {
+    border-color: #bababa;
+  }
+
+  &:disabled {
+    border-color: #bababa;
+    opacity: 0.3;
+
+    & + .form__label--radio {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 40px;
@@ -192,33 +233,35 @@
   }
 }
 
-.form__radio {
-  & + .form__control-mark {
-    border-radius: 50%;
-  }
-
-  &:checked + .form__control-mark::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 13px;
-    height: 13px;
-    background-color: $basic-green;
-    border-radius: 50%;
-    content: "";
-
-    @media (min-width: $tablet-width) {
-      width: 18px;
-      height: 18px;
-    }
-  }
-}
-
 .form__checkbox {
-  &:checked + .form__control-mark {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  background-color: $white;
+  border: 1px solid $special-light-grey;
+
+  &:checked {
     background-image: url("../../images/icons/stack.svg#tick");
     background-position: center;
+  }
+
+  &:hover {
+    border-color: #bababa;
+  }
+
+  &:disabled {
+    border-color: #bababa;
+    opacity: 0.3;
+
+    & + .form__label--checkbox {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -268,7 +311,7 @@
   background-color: $white;
   transform: translate(-20px, -16px);
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: calc($tablet-width - 1px)) {
     max-width: 222px;
   }
 
@@ -298,7 +341,9 @@
   }
 
   &:focus {
-    border: 2px solid $dark-grey;
+    border-color: $dark-grey;
+    box-shadow: inset 0 0 0 1px $dark-grey;
+    outline: none;
   }
 
   &--icon {
@@ -306,7 +351,8 @@
   }
 
   &--error {
-    border: 2px solid $error;
+    border-color: $error;
+    box-shadow: inset 0 0 0 1px $error;
   }
 
   &--icon:focus + .form__icon {
@@ -319,6 +365,8 @@
 
   &--textarea {
     height: 150px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     @media (min-width: $tablet-width) {
       height: 175px;
@@ -382,8 +430,11 @@
   margin-top: 21px;
   margin-bottom: 0;
   line-height: 16px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-top: 16px;
     font-size: 16px;
+    text-align: left;
   }
 }
