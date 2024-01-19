@@ -5,6 +5,16 @@
     &--closed .main-menu__item {
       display: none;
     }
+
+    &--nojs {
+      .main-menu__item {
+        display: block;
+      }
+
+      .main-nav__toggle {
+        display: none;
+      }
+    }
   }
 }
 

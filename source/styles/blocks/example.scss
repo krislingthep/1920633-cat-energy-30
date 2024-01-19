@@ -1,11 +1,11 @@
 .example {
   padding-top: 25px;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
-    padding-bottom: 81px;
+    padding-bottom: 66px;
     background-image: linear-gradient($white 619px, $light-grey 619px);
   }
 
@@ -79,7 +79,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 81px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,8 +92,9 @@
 
   display: grid;
   grid-template-columns: repeat(2, 124px);
+  justify-content: center;
   gap: 32px;
-  margin-bottom: 27px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 162px);
@@ -101,18 +102,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 66px;
+    justify-content: start;
+    margin-bottom: 62px;
   }
 }
 
 .example__item {
-  padding: 13px 15px 0;
+  position: relative;
+  padding: 13px 15px 16px;
   text-align: center;
   border-radius: 4px;
   border: 1px solid $special-light-grey;
 
   @media (min-width: $tablet-width) {
     padding-top: 15px;
+    padding-bottom: 18px;
   }
 }
 
@@ -130,23 +134,27 @@
 }
 
 .example__text {
-  max-width: 77px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
+  padding: 0 14px;
   font-size: 12px;
   line-height: 12px;
   color: $dark-grey;
   background-color: $light-grey;
-  transform: translateY(8px);
 
   @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
     background-color: $white;
   }
 
   @media (min-width: $tablet-width) {
-    max-width: none;
+    min-width: 130px;
+    padding: 0;
+    top: 90%;
     font-size: 14px;
     line-height: 14px;
-    transform: translateY(80%);
   }
 }
 
@@ -161,6 +169,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    margin-bottom: 35px;
     font-size: 20px;
     text-align: right;
   }

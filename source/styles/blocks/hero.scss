@@ -31,12 +31,12 @@
 .hero__container {
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    padding-left: 90px;
+  @media (max-width: calc($tablet-width - 1px)) {
+    text-align: center;
   }
 
-  @media (min-width: $desktop-width) {
-    padding-left: 80px;
+  @media (min-width: $tablet-width) {
+    padding-left: 120px;
   }
 }
 
@@ -48,6 +48,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    text-align: left;
     max-width: 420px;
   }
 }
@@ -95,12 +96,14 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 201px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: $desktop-width) {
     top: -81px;
-    left: 447px;
+    left: 487px;
+    transform: none;
   }
 }
 

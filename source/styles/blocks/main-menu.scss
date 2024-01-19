@@ -15,6 +15,7 @@
 
 .main-menu__item {
   @media (max-width: calc($tablet-width - 1px)) {
+    margin: 0 -20px;
     border-top: 1px solid #e6e6e6;
   }
 }
@@ -30,9 +31,22 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (max-width: calc($tablet-width - 1px)) {
     padding-top: 22px;
     padding-bottom: 23px;
+
+    &--current {
+      color: $basic-green;
+    }
   }
 
   @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {

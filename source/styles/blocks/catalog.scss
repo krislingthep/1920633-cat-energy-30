@@ -4,12 +4,12 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 61px;
-    padding-bottom: 89px;
+    padding-bottom: 92px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 70px;
-    padding-bottom: 97px;
+    padding-bottom: 99px;
   }
 }
 
@@ -30,6 +30,11 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 84px;
+    margin-left: -30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
   }
 }
 
