@@ -9,6 +9,12 @@
   text-transform: uppercase;
   border: none;
 
+  &:disabled,
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none
+  }
+
   &--primary {
     color: $white;
     background-color: $basic-green;

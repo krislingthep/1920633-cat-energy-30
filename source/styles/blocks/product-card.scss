@@ -181,6 +181,12 @@
 .product-card__details-row {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    &:last-child {
+      padding-bottom: 5px;
+    }
+  }
 }
 
 .product-card__button {
@@ -191,7 +197,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 37px;
+    margin-top: 32px;
   }
 
   &--more {
