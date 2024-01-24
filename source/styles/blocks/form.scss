@@ -179,6 +179,7 @@
 }
 
 .form__radio {
+  flex-shrink: 0;
   margin: 0;
   width: 30px;
   height: 30px;
@@ -218,6 +219,7 @@
 }
 
 .form__checkbox {
+  flex-shrink: 0;
   margin: 0;
   width: 30px;
   height: 30px;

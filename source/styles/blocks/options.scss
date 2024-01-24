@@ -186,19 +186,20 @@
 
   &::after {
     position: absolute;
-    top: 5px;
-    right: -49px;
+    bottom: 7px;
+    right: -48px;
     width: 32px;
     height: 12px;
     background-image: url("../../images/icons/stack.svg#arrow");
     background-repeat: no-repeat;
-    background-position: -8px;
+    background-size: 32px 12px;
+    background-position: right 8px center;
     content: "";
   }
 
   &:hover::after,
   &:focus::after {
-    background-position: 0;
+    background-position: right center;
     transition: 0.3s ease-in-out;
   }
 
@@ -212,7 +213,7 @@
     line-height: normal;
 
     &::after {
-      top: 9px;
+      bottom: 9px;
       right: -58px;
     }
   }
