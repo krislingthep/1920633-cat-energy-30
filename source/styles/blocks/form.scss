@@ -38,8 +38,8 @@
 
 .form__container {
   @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
-    margin: 0 30px;
-    padding: 0 40px;
+    margin: 0 auto;
+    padding: 0 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -179,6 +179,7 @@
 }
 
 .form__radio {
+  flex-shrink: 0;
   margin: 0;
   width: 30px;
   height: 30px;
@@ -218,6 +219,7 @@
 }
 
 .form__checkbox {
+  flex-shrink: 0;
   margin: 0;
   width: 30px;
   height: 30px;
@@ -297,7 +299,7 @@
   transform: translate(-20px, -16px);
 
   @media (max-width: calc($tablet-width - 1px)) {
-    max-width: 222px;
+    max-width: 227px;
   }
 
   @media (min-width: $tablet-width) {
@@ -332,7 +334,11 @@
   }
 
   &--icon {
-    padding-right: 46px;
+    padding-right: 41px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 46px;
+    }
   }
 
   &--error {
@@ -354,6 +360,7 @@
 
     @media (min-width: $tablet-width) {
       height: 175px;
+      padding: 15px 20px;
     }
   }
 }

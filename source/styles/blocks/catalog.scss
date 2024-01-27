@@ -1,26 +1,26 @@
 .catalog {
   padding-top: 27px;
-  padding-bottom: 39px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 61px;
-    padding-bottom: 92px;
+    padding: 61px 30px 92px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 70px;
-    padding-bottom: 99px;
+    padding: 70px 0 99px;
   }
 }
 
 .catalog__container {
   @media (min-width: $tablet-width) {
-    width: 708px;
+    min-width: 708px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
+    max-width: none;
   }
 }
 
