@@ -68,11 +68,8 @@
 
 .contacts__map {
   position: relative;
+  height: 362px;
   z-index: 2;
-
-  @media (min-width: $mobile-width) {
-    height: 362px;
-  }
 
   @media (min-width: $tablet-width) {
     min-height: 400px;

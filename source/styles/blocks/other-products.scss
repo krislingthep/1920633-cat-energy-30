@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
-    padding: 26px 38px 27px;
+    padding: 26px 37px 27px;
     border: 1px solid $special-light-grey;
 
     &:not(:first-child) {
@@ -26,6 +26,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     padding: 15px 0 16px;
   }
