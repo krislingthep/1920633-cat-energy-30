@@ -2,10 +2,6 @@
   background-color: $white;
   z-index: 1;
 
-  @media (max-width: calc($tablet-width - 1px)) {
-    border-bottom: 1px solid #e6e6e6;
-  }
-
   &--index {
     position: relative;
     border: none;
