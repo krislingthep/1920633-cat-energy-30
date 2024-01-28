@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  z-index: 2;
 
   @media (max-width: calc($tablet-width - 1px)) {
     padding-top: 27px;
@@ -25,6 +24,7 @@
   @media (min-width: $desktop-width) {
     min-height: 580px;
     padding-top: 106px;
+    z-index: 1;
   }
 }
 
