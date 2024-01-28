@@ -6,6 +6,15 @@
       display: none;
     }
 
+    &--opened {
+      .main-nav__list {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+
     &--nojs {
       .main-menu__item {
         display: block;

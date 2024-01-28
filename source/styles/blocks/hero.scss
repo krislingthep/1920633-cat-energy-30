@@ -1,16 +1,16 @@
 .hero {
   position: relative;
-  z-index: 2;
 
   @media (max-width: calc($tablet-width - 1px)) {
     padding-top: 27px;
     background-color: #65a83d;
-    background-image: image-set(
-      url("../../images/hero/index-background-mobile@1x.webp") type("image/webp") 1x,
-      url("../../images/hero/index-background-mobile@2x.webp") type("image/webp") 2x,
-      url("../../images/hero/index-background-mobile@1x.jpg") type("image/jpg") 1x,
-      url("../../images/hero/index-background-mobile@2x.jpg") type("image/jpg") 2x
-      ),
+    background-image:
+      image-set(
+        url("../../images/hero/index-background-mobile@1x.webp") type("image/webp") 1x,
+        url("../../images/hero/index-background-mobile@2x.webp") type("image/webp") 2x,
+        url("../../images/hero/index-background-mobile@1x.jpg") type("image/jpg") 1x,
+        url("../../images/hero/index-background-mobile@2x.jpg") type("image/jpg") 2x
+        ),
       linear-gradient(#65a83d 302px, $white 302px);
     background-repeat: no-repeat;
     background-position: center top;
@@ -24,6 +24,7 @@
   @media (min-width: $desktop-width) {
     min-height: 580px;
     padding-top: 106px;
+    z-index: 1;
   }
 }
 
