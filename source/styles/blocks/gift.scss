@@ -41,24 +41,26 @@
   @media (min-width: $tablet-width) {
     min-height: 200px;
     padding: 71px 125px 69px 421px;
-    background-image: image-set(
-      url("../../images/catalog/gift-tablet@1x.webp") type("image/webp") 1x,
-      url("../../images/catalog/gift-tablet@2x.webp") type("image/webp") 2x,
-      url("../../images/catalog/gift-tablet@1x.jpg") type("image/jpg") 1x,
-      url("../../images/catalog/gift-tablet@2x.jpg") type("image/jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../images/catalog/gift-tablet@1x.webp") type("image/webp") 1x,
+        url("../../images/catalog/gift-tablet@2x.webp") type("image/webp") 2x,
+        url("../../images/catalog/gift-tablet@1x.jpg") type("image/jpg") 1x,
+        url("../../images/catalog/gift-tablet@2x.jpg") type("image/jpg") 2x
+      );
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
     min-height: 288px;
     padding: 185px 40px 42px;
-    background-image: image-set(
-      url("../../images/catalog/gift-desktop@1x.webp") type("image/webp") 1x,
-      url("../../images/catalog/gift-desktop@2x.webp") type("image/webp") 2x,
-      url("../../images/catalog/gift-desktop@1x.jpg") type("image/jpg") 1x,
-      url("../../images/catalog/gift-desktop@2x.jpg") type("image/jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../images/catalog/gift-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/catalog/gift-desktop@2x.webp") type("image/webp") 2x,
+        url("../../images/catalog/gift-desktop@1x.jpg") type("image/jpg") 1x,
+        url("../../images/catalog/gift-desktop@2x.jpg") type("image/jpg") 2x
+      );
   }
 }
 
