@@ -85,13 +85,14 @@
 
   &--radio {
     @media (min-width: $mobile-width) {
-      padding: 22px 20px 18px;
       margin: 0 -20px;
+      padding: 22px 20px 18px;
       border-top: 1px solid $line-grey;
       border-bottom: 1px solid $line-grey;
     }
 
     @media (min-width: $tablet-width) {
+      margin: 0;
       padding: 22px 26px 27px;
       border: 1px solid $line-grey;
     }
