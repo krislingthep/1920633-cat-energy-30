@@ -1,24 +1,38 @@
 .copyright__link {
-  font-size: 16px;
-  line-height: 20px;
-  color: $dark-grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    color: $basic-green;
+  }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:active .copyright__icon {
+    color: $basic-green;
+  }
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 23px;
   }
 }
 
-.copyright__link-icon {
+.copyright__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark-grey;
+}
+
+.copyright__icon {
   color: $special-grey;
-
-  &:hover,
-  &:focus {
-    color: $basic-green;
-  }
-
-  &:active {
-    color: $basic-green;
-    opacity: 0.3;
-  }
 }
